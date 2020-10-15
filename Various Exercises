@@ -1,0 +1,21 @@
+# Q1. Write a program that reads a Fahrenheit degree as a float from standard input, then converts it to Celsius and displays the result in standard output.
+
+# Answer:
+fahrenheit = float(input("Enter Temperature in \u00b0F: ")) #float input
+celsius = (5/9) * (fahrenheit - 32)
+print("Temperauture is", f"{celsius:.1f}\u00b0C")
+
+# Q2. Write a program that reads in the radius and length of a cylinder and computes its volume.
+
+# Answer:
+import math
+unitschoices = ("m", "cm")
+unitschoice = str(input("What Units do you want to use? (m/cm) ")) #asking for input to change units
+if unitschoice not in unitschoices:
+  print("Please enter correctly")
+else: #inputs in float
+  radius = float(input("Enter the radius of the cylinder: "))
+  length = float(input("Enter the length of of the cylinder: "))
+  area = radius * radius * math.pi
+  volume = area * length
+print("Volume of the cylinder is", f"{volume:.2f}" + unitschoice +"\u00b3") #output
